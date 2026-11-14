@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "images": "python3 scripts/build-images.py"
+    "images": "python3 scripts/build-images.py",
+    "deploy": "bash scripts/deploy.sh"
   },
   "author": "",
   "license": "ISC",

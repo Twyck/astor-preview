@@ -52,3 +52,7 @@ Os nomes dos pratos e drinks nas legendas vêm dos nomes dos arquivos oficiais (
 - Links de reserva por casa (se a Tagme tiver um smartlink por casa).
 - Endereços e telefones oficiais das cinco casas que não os publicam.
 - Fotos em alta da coquetelaria autoral para ampliar a cena 04.
+
+## Prévia publicada
+https://twyck.github.io/astor-preview/ — marcada como `noindex` e com `robots.txt` bloqueando buscadores.
+Para atualizar depois de ajustes: `npm run deploy`. No lançamento oficial, remover o `noindex` do `index.html` e o `public/robots.txt`.
