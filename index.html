@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Astor | Para cada desejo, um bar. Para todos, Astor.</title>
+  <meta name="description" content="Bar de alma boêmia em São Paulo. Clássicos da cozinha boêmia, coquetelaria precisa e seis endereços: Oscar Freire, Paulista, Shopping JK, Vila Madalena, Vila Nova Conceição e Bar do Cofre.">
+  <meta name="theme-color" content="#141312">
+  <!-- Prévia para aprovação: remover no lançamento oficial -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="%SITE_URL%/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Astor">
+  <meta property="og:title" content="Astor | Para cada desejo, um bar. Para todos, Astor.">
+  <meta property="og:description" content="Clássicos da cozinha boêmia, coquetelaria precisa e encontros que pedem para durar. Seis endereços em São Paulo.">
+  <meta property="og:url" content="%SITE_URL%/">
+  <meta property="og:image" content="%SITE_URL%/og-astor.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Salão do Astor à noite, com mesas cheias e garçom servindo">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="img/servico-1080.webp" imagesrcset="img/servico-640.webp 640w, img/servico-1080.webp 1080w, img/servico-1600.webp 1600w, img/servico-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+
+  <script>
+    // Estado inicial da abertura do hero: só esconde se o JS e o movimento estiverem disponíveis.
+    ;(function () {
+      var d = document.documentElement
+      d.classList.add('js')
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        d.classList.add('js-intro')
+        setTimeout(function () { d.classList.remove('js-intro') }, 3500)
+      }
+    })()
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "%SITE_URL%/#astor",
+        "name": "Astor",
+        "url": "%SITE_URL%/",
+        "slogan": "Para cada desejo, um bar. Para todos, Astor.",
+        "sameAs": [
+          "https://www.instagram.com/barastor/",
+          "https://www.facebook.com/bar.astor",
+          "https://www.youtube.com/@barastor8759"
+        ]
+      },
+      { "@type": "BarOrPub", "name": "Astor Oscar Freire", "parentOrganization": { "@id": "%SITE_URL%/#astor" }, "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" }, "hasMenu": "https://livemenu.app/menu/6453eb740653a50055da50ed", "acceptsReservations": "https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee", "image": "%SITE_URL%/img/casa-oscar-freire-1600.webp" },
+      { "@type": "BarOrPub", "name": "Astor Paulista", "parentOrganization": { "@id": "%SITE_URL%/#astor" }, "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" }, "hasMenu": "https://livemenu.app/menu/64b7e0d12987cd00505731a7", "acceptsReservations": "https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee", "image": "%SITE_URL%/img/casa-paulista-1600.webp" },
+      { "@type": "BarOrPub", "name": "Astor Shopping JK", "parentOrganization": { "@id": "%SITE_URL%/#astor" }, "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" }, "hasMenu": "https://livemenu.app/menu/6453e3b236739a00555e405d", "acceptsReservations": "https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee", "image": "%SITE_URL%/img/casa-jk-1600.webp" },
+      { "@type": "BarOrPub", "name": "Astor Vila Madalena", "parentOrganization": { "@id": "%SITE_URL%/#astor" }, "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" }, "hasMenu": "https://livemenu.app/menu/64524f1db252e60056772ce9", "acceptsReservations": "https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee", "image": "%SITE_URL%/img/casa-vila-madalena-1600.webp" },
+      { "@type": "BarOrPub", "name": "Astor Vila Nova Conceição", "parentOrganization": { "@id": "%SITE_URL%/#astor" }, "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" }, "hasMenu": "https://livemenu.app/menu/67ddbc3c44b9d5e648e942b7", "acceptsReservations": "https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee", "image": "%SITE_URL%/img/casa-vila-nova-1600.webp" },
+      {
+        "@type": "BarOrPub",
+        "name": "Bar do Cofre",
+        "parentOrganization": { "@id": "%SITE_URL%/#astor" },
+        "address": { "@type": "PostalAddress", "streetAddress": "Rua João Brícola, 24 – Centro (subsolo do Farol Santander)", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+        "geo": { "@type": "GeoCoordinates", "latitude": -23.5458897, "longitude": -46.6341989 },
+        "hasMenu": "https://livemenu.app/menu/64513977e74a9f0055b72ef7",
+        "acceptsReservations": "https://reservation-widget.tagme.com.br/smartlink/64513977e74a9f0055b72ef7",
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "16:00", "closes": "23:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "16:00", "closes": "00:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "12:00", "closes": "00:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "12:00", "closes": "01:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "20:00" }
+        ],
+        "image": "%SITE_URL%/img/casa-bar-do-cofre-1600.webp"
+      }
+    ]
+  }
+  </script>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ================= NAVEGAÇÃO ================= -->
+  <header class="nav" data-nav>
+    <div class="nav__bar">
+      <a class="nav__brand wordmark" href="#inicio" aria-label="Astor, voltar ao início">ASTOR</a>
+
+      <nav class="nav__primary" aria-label="Principal">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="#o-astor" data-nav-link="o-astor">O Astor</a></li>
+          <li><button class="nav__link" type="button" data-menu-open aria-haspopup="dialog">Cardápio</button></li>
+          <li class="nav__drop">
+            <a class="nav__link" href="#casas" data-nav-link="casas">Nossas Casas <span class="nav__caret" aria-hidden="true"></span></a>
+            <ul class="nav__dropmenu" aria-label="Casas">
+              <li><a href="#casa-oscar-freire">Oscar Freire</a></li>
+              <li><a href="#casa-paulista">Paulista</a></li>
+              <li><a href="#casa-jk">Shopping JK</a></li>
+              <li><a href="#casa-vila-madalena">Vila Madalena</a></li>
+              <li><a href="#casa-vila-nova">Vila Nova Conceição</a></li>
+              <li><a href="#casa-bar-do-cofre">Bar do Cofre</a></li>
+            </ul>
+          </li>
+          <li><a class="nav__link" href="#experiencias" data-nav-link="experiencias">Experiências</a></li>
+          <li><a class="nav__link" href="#reservas" data-nav-link="reservas">Reservas</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--line btn--sm nav__cta" href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener">
+        <span class="btn__label" data-label="Reserve sua mesa">Reserve sua mesa</span>
+        <span class="btn__arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="menu-mobile" data-burger>
+        <span class="nav__burger-lines" aria-hidden="true"><i></i><i></i></span>
+        <span class="nav__burger-text">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu mobile: redesenhado como índice editorial, não uma lista comprimida -->
+  <div class="mmenu" id="menu-mobile" role="dialog" aria-modal="true" aria-label="Menu" hidden data-mmenu>
+    <div class="mmenu__inner">
+      <ol class="mmenu__links">
+        <li><a href="#o-astor"><span>01</span>O Astor</a></li>
+        <li><button type="button" data-menu-open><span>02</span>Cardápio</button></li>
+        <li><a href="#casas"><span>03</span>Nossas Casas</a></li>
+        <li><a href="#experiencias"><span>04</span>Experiências</a></li>
+        <li><a href="#reservas"><span>05</span>Reservas</a></li>
+      </ol>
+      <div class="mmenu__casas">
+        <p class="eyebrow">Seis endereços</p>
+        <ul>
+          <li><a href="#casa-oscar-freire">Oscar Freire</a></li>
+          <li><a href="#casa-paulista">Paulista</a></li>
+          <li><a href="#casa-jk">Shopping JK</a></li>
+          <li><a href="#casa-vila-madalena">Vila Madalena</a></li>
+          <li><a href="#casa-vila-nova">Vila Nova Conceição</a></li>
+          <li><a href="#casa-bar-do-cofre">Bar do Cofre</a></li>
+        </ul>
+      </div>
+      <a class="btn btn--solid mmenu__cta" href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener">
+        <span class="btn__label" data-label="Reserve sua mesa">Reserve sua mesa</span><span class="btn__arrow" aria-hidden="true">↗</span>
+      </a>
+      <p class="mmenu__social"><a href="https://www.instagram.com/barastor/" target="_blank" rel="noopener">Instagram @barastor</a></p>
+    </div>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ================= 01 · HERO ================= -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title" data-section="inicio">
+      <div class="hero__media" data-hero-media>
+        <img data-pic="servico" class="hero__img" alt="Salão do Astor à noite: mesas cheias, luz âmbar e um garçom servindo" loading="eager" fetchpriority="high" decoding="sync">
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="hero__inner container">
+        <p class="eyebrow eyebrow--light" data-intro="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Um bar de alma boêmia · São Paulo</p>
+        <h1 class="hero__title display" id="hero-title" data-intro="title">Para cada desejo, um bar. <em>Para todos, Astor.</em></h1>
+        <p class="hero__lede" data-intro="fade">Clássicos da cozinha boêmia, coquetelaria precisa e encontros que pedem para durar.</p>
+        <div class="hero__ctas" data-intro="fade">
+          <a class="btn btn--solid" href="#o-astor"><span class="btn__label" data-label="Conheça o Astor">Conheça o Astor</span><span class="btn__arrow" aria-hidden="true">↓</span></a>
+          <button class="btn btn--line" type="button" data-menu-open><span class="btn__label" data-label="Explore o cardápio">Explore o cardápio</span><span class="btn__arrow" aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <p class="hero__wordmark wordmark" aria-hidden="true" data-hero-wordmark>ASTOR</p>
+
+      <a class="hero__scroll" href="#o-astor" data-intro="fade">
+        <span>Role para descobrir</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ================= 02 · MANIFESTO ================= -->
+    <section class="manifesto section--ivory" id="o-astor" aria-labelledby="manifesto-title" data-section="o-astor" tabindex="-1">
+      <div class="container manifesto__grid">
+        <p class="eyebrow" id="manifesto-title"><span class="eyebrow__rule" aria-hidden="true"></span>O Astor</p>
+
+        <p class="manifesto__text display" data-scrub-words>
+          O Astor é um bar premium e cosmopolita. Em seis endereços em São Paulo, serve coquetelaria precisa e inovadora, cozinha contemporânea e de conforto, chopp bem tirado e uma seleção esperta de vinhos e destilados — com um serviço que chama pelo nome.
+        </p>
+
+        <aside class="manifesto__award" data-reveal aria-label="Reconhecimento">
+          <p class="manifesto__award-num display" aria-hidden="true">6</p>
+          <p class="manifesto__award-text">Maior vencedor do prêmio de <strong>Melhor Bar</strong> da Folha, com seis títulos.</p>
+          <p class="manifesto__award-src">O Melhor de São Paulo · Folha de S.Paulo</p>
+        </aside>
+
+        <figure class="manifesto__fig manifesto__fig--a" data-parallax="-12">
+          <div class="frame frame--reveal" data-clip-reveal>
+            <img data-pic="hero-bar" sizes="(min-width: 1024px) 28vw, 60vw" alt="Balcão do Astor sob o painel de azulejos com o nome da casa">
+          </div>
+        </figure>
+        <figure class="manifesto__fig manifesto__fig--b" data-parallax="18">
+          <div class="frame frame--reveal" data-clip-reveal>
+            <img data-pic="brinde" sizes="(min-width: 1024px) 26vw, 56vw" alt="Amigos brindando em uma mesa do Astor">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 03 · GASTRONOMIA ================= -->
+    <section class="gastro section--ink" id="gastronomia" aria-labelledby="gastro-title" data-section="o-astor">
+      <div class="gastro__stage" data-gastro>
+        <figure class="gastro__plate" data-gastro-plate>
+          <img data-pic="steak-tartare" class="feather feather--plate" sizes="(min-width: 1024px) 82vw, 140vw" alt="Steak tartare servido com salada, picles, torradas e batatas fritas, visto de cima">
+          <figcaption class="caption caption--light" data-gastro-caption><span class="caption__rule" aria-hidden="true"></span>Steak Tartare</figcaption>
+        </figure>
+
+        <div class="gastro__copy" data-gastro-copy>
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__rule" aria-hidden="true"></span>Nossa gastronomia</p>
+          <h2 class="display h2" id="gastro-title" data-split>Pratos que atravessam gerações.</h2>
+          <p class="lede" data-reveal>Uma cozinha clássica, com alma brasileira e o toque contemporâneo do Astor.</p>
+          <button class="link-arrow" type="button" data-menu-open data-reveal>Explore o cardápio <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <div class="protag container" aria-labelledby="protag-title">
+        <header class="protag__head">
+          <h3 class="display h3" id="protag-title" data-split>Os protagonistas</h3>
+          <p class="lede lede--muted" data-reveal>Clássicos da cozinha boêmia com a nossa cara.</p>
+        </header>
+
+        <figure class="protag__item protag__item--a" data-parallax="-8">
+          <img data-pic="batatas" class="feather feather--soft" sizes="(min-width: 1024px) 46vw, 92vw" alt="Batatas à madrilenha com presunto cru e ovos de gema mole, vistas de cima">
+          <figcaption class="caption caption--light"><span class="caption__num">01</span>Batatas à Madrilenha</figcaption>
+        </figure>
+        <figure class="protag__item protag__item--b" data-parallax="10">
+          <div class="frame" data-clip-reveal>
+            <img data-pic="bolinho" sizes="(min-width: 1024px) 26vw, 60vw" alt="Bolinhos de bacalhau com molho verde e um chope">
+          </div>
+          <figcaption class="caption caption--light"><span class="caption__num">02</span>Bolinho de bacalhau</figcaption>
+        </figure>
+        <figure class="protag__item protag__item--c" data-parallax="-4">
+          <div class="frame" data-clip-reveal>
+            <img data-pic="prato-conforto" sizes="(min-width: 1024px) 24vw, 60vw" alt="Prato de conforto com carne acebolada, ovo frito, farofa e pastel">
+          </div>
+          <figcaption class="caption caption--light"><span class="caption__num">03</span>Cozinha de conforto</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 04 · COQUETELARIA ================= -->
+    <section class="cock" id="coquetelaria" aria-labelledby="cock-title" data-section="o-astor">
+      <div class="cock__stage" data-cock>
+        <p class="cock__word display" aria-hidden="true" data-cock-word>Coquetelaria</p>
+
+        <figure class="cock__glass" data-cock-glass>
+          <img data-pic="latino-americano" class="feather feather--tall" sizes="(min-width: 1024px) 40vw, 90vw" alt="Coquetel Latino Americano em copo alto, com casca de limão, sobre fundo escuro">
+          <figcaption class="caption caption--light"><span class="caption__rule" aria-hidden="true"></span>Latino Americano</figcaption>
+        </figure>
+
+        <div class="cock__copy" data-cock-copy>
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__rule" aria-hidden="true"></span>Coquetelaria</p>
+          <h2 class="display h2" id="cock-title" data-split>Drinks icônicos. <em>Novas histórias.</em></h2>
+          <p class="lede" data-reveal>Uma carta de coquetéis que celebra o clássico e o contemporâneo.</p>
+          <button class="link-arrow" type="button" data-menu-open data-reveal>Conheça nossa coquetelaria <span aria-hidden="true">→</span></button>
+        </div>
+
+        <div class="cock__scene" data-cock-scene>
+          <img data-pic="coqueteis" sizes="100vw" alt="Cinco coquetéis servidos sobre uma mesa de madeira, com luz baixa do bar">
+          <p class="cock__note" data-cock-note>
+            No Bar do Cofre, a carta autoral <em>Biomas do Brasil</em> chega à sua sexta geração.
+            <a href="#casa-bar-do-cofre" class="link-arrow link-arrow--sm">Conheça o Bar do Cofre <span aria-hidden="true">→</span></a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 · EXPERIÊNCIA ================= -->
+    <section class="exp section--ink" id="experiencias" aria-labelledby="exp-title" data-section="experiencias" tabindex="-1">
+      <div class="exp__stage" data-exp>
+        <h2 class="exp__title display" id="exp-title">
+          <span class="exp__line exp__line--a" data-exp-a>Mais do que um encontro.</span>
+          <span class="exp__line exp__line--b" data-exp-b><em>Uma experiência Astor.</em></span>
+        </h2>
+        <div class="exp__frame" data-exp-frame>
+          <img data-pic="mural" sizes="100vw" alt="O salão do Astor no Shopping JK, com o grande painel de azulejos e o balcão cheio">
+        </div>
+      </div>
+
+      <div class="exp__body container">
+        <blockquote class="exp__quote display" data-split>
+          Um serviço que chama pelo nome, em um ambiente encantador.
+        </blockquote>
+
+        <ol class="exp__list" data-exp-list>
+          <li class="exp__item" data-preview="subastor">
+            <span class="exp__num">01</span>
+            <h3 class="exp__name display">Subastor</h3>
+            <p class="exp__desc">Para viver um segredo, às vezes é preciso descer um lance de escadas. Escondido atrás de cortinas de veludo, você encontra o bar abaixo do bar.</p>
+            <a class="link-arrow link-arrow--sm" href="https://subastor.com.br/" target="_blank" rel="noopener">Saiba mais <span aria-hidden="true">↗</span></a>
+            <img data-pic="subastor" class="exp__thumb" sizes="(min-width: 1024px) 22vw, 40vw" alt="Subastor: salão vermelho com o letreiro neon “Por trás das cortinas”">
+          </li>
+          <li class="exp__item" data-preview="cofre">
+            <span class="exp__num">02</span>
+            <h3 class="exp__name display">Bar do Cofre</h3>
+            <p class="exp__desc">Um segredo guardado a sete chaves, no subsolo do edifício mais emblemático de São Paulo.</p>
+            <a class="link-arrow link-arrow--sm" href="#casa-bar-do-cofre">Ver a casa <span aria-hidden="true">→</span></a>
+            <img data-pic="cofre-salao" class="exp__thumb" sizes="(min-width: 1024px) 22vw, 40vw" alt="Salão do Bar do Cofre, com cofres de banco e poltronas de veludo">
+          </li>
+          <li class="exp__item" data-preview="eventos">
+            <span class="exp__num">03</span>
+            <h3 class="exp__name display">Eventos e celebrações</h3>
+            <p class="exp__desc">Para reunir quem importa. Na Oscar Freire, o Terraço do Astor recebe eventos privados.</p>
+            <a class="link-arrow link-arrow--sm" href="https://app.pipefy.com/public/form/mDOpgFFj" target="_blank" rel="noopener">Solicitar um evento <span aria-hidden="true">↗</span></a>
+            <img data-pic="salao" class="exp__thumb" sizes="(min-width: 1024px) 22vw, 40vw" alt="Salão do Astor cheio, com o painel de azulejos ao fundo">
+          </li>
+          <li class="exp__item" data-preview="delivery">
+            <span class="exp__num">04</span>
+            <h3 class="exp__name display">O Astor na sua casa</h3>
+            <p class="exp__desc">Sejam pratos clássicos ou alguma de nossas receitas inovadoras, o Astor também vai até você.</p>
+            <a class="link-arrow link-arrow--sm" href="https://barastor.com.br/delivery/" target="_blank" rel="noopener">Pedir delivery <span aria-hidden="true">↗</span></a>
+            <img data-pic="steak-tartare" class="exp__thumb" sizes="(min-width: 1024px) 22vw, 40vw" alt="Steak tartare com batatas fritas">
+          </li>
+          <li class="exp__item" data-preview="mood">
+            <span class="exp__num">05</span>
+            <h3 class="exp__name display">Astor Mood</h3>
+            <p class="exp__desc">A trilha sonora das nossas casas, para ouvir onde você estiver.</p>
+            <a class="link-arrow link-arrow--sm" href="https://bit.ly/astor-mood" target="_blank" rel="noopener">Ouvir no Spotify <span aria-hidden="true">↗</span></a>
+            <img data-pic="jk-salao" class="exp__thumb" sizes="(min-width: 1024px) 22vw, 40vw" alt="Mesas do Astor no Shopping JK com luminárias em estilo art déco">
+          </li>
+        </ol>
+      </div>
+      <div class="exp__cursor" aria-hidden="true" data-exp-cursor></div>
+    </section>
+
+    <!-- ================= 06 · NOSSAS CASAS ================= -->
+    <section class="casas section--ivory" id="casas" aria-labelledby="casas-title" data-section="casas" tabindex="-1">
+      <div class="casas__pin" data-casas>
+        <header class="casas__head container">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Nossas casas</p>
+            <h2 class="display h2" id="casas-title" data-split>Um Astor para você.</h2>
+          </div>
+          <p class="lede lede--ink">Seis endereços em São Paulo, perfeitos para você.</p>
+          <div class="casas__progress" aria-hidden="true">
+            <span class="casas__count"><b data-casas-current>01</b> / 06</span>
+            <span class="casas__bar"><i data-casas-bar></i></span>
+          </div>
+        </header>
+
+        <div class="casas__viewport" data-casas-viewport>
+          <ol class="casas__track" data-casas-track>
+            <li class="casa" id="casa-oscar-freire" tabindex="-1">
+              <figure class="casa__media"><img data-pic="casa-oscar-freire" sizes="(min-width: 1024px) 52vw, 86vw" alt="Fachada do Astor Oscar Freire à noite, na esquina, com letreiros vermelhos acesos"></figure>
+              <div class="casa__info">
+                <span class="casa__num">01</span>
+                <h3 class="casa__name display">Oscar Freire</h3>
+                <ul class="casa__facts"><li>Valet</li><li>Terraço do Astor para eventos privados</li><li>Pet friendly nas mesas externas</li></ul>
+                <div class="casa__actions">
+                  <a href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Reservar <span aria-hidden="true">↗</span></a>
+                  <a href="https://livemenu.app/menu/6453eb740653a50055da50ed" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Cardápio <span aria-hidden="true">↗</span></a>
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+Astor+Oscar+Freire+S%C3%A3o+Paulo" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Como chegar <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li class="casa" id="casa-paulista" tabindex="-1">
+              <figure class="casa__media"><img data-pic="casa-paulista" sizes="(min-width: 1024px) 52vw, 86vw" alt="Astor Paulista: fachada com letreiro vermelho e mesas externas entre edifícios espelhados"></figure>
+              <div class="casa__info">
+                <span class="casa__num">02</span>
+                <h3 class="casa__name display">Paulista</h3>
+                <ul class="casa__facts"><li>Mesas externas</li><li>Pet friendly nas mesas externas</li></ul>
+                <div class="casa__actions">
+                  <a href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Reservar <span aria-hidden="true">↗</span></a>
+                  <a href="https://livemenu.app/menu/64b7e0d12987cd00505731a7" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Cardápio <span aria-hidden="true">↗</span></a>
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+Astor+Paulista+S%C3%A3o+Paulo" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Como chegar <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li class="casa" id="casa-jk" tabindex="-1">
+              <figure class="casa__media"><img data-pic="casa-jk" sizes="(min-width: 1024px) 52vw, 86vw" alt="Entrada do Astor no Shopping JK Iguatemi, com o painel de azulejos visível ao fundo"></figure>
+              <div class="casa__info">
+                <span class="casa__num">03</span>
+                <h3 class="casa__name display">Shopping JK</h3>
+                <ul class="casa__facts"><li>No Shopping JK Iguatemi</li><li>Estacionamento do shopping</li></ul>
+                <div class="casa__actions">
+                  <a href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Reservar <span aria-hidden="true">↗</span></a>
+                  <a href="https://livemenu.app/menu/6453e3b236739a00555e405d" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Cardápio <span aria-hidden="true">↗</span></a>
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+Astor+Shopping+JK+Iguatemi+S%C3%A3o+Paulo" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Como chegar <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li class="casa" id="casa-vila-madalena" tabindex="-1">
+              <figure class="casa__media"><img data-pic="casa-vila-madalena" sizes="(min-width: 1024px) 52vw, 86vw" alt="Fachada do Astor Vila Madalena, com toldos vermelhos entre árvores"></figure>
+              <div class="casa__info">
+                <span class="casa__num">04</span>
+                <h3 class="casa__name display">Vila Madalena</h3>
+                <ul class="casa__facts"><li>Valet</li><li>Pet friendly nas mesas externas</li><li>Delivery pelo iFood</li></ul>
+                <div class="casa__actions">
+                  <a href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Reservar <span aria-hidden="true">↗</span></a>
+                  <a href="https://livemenu.app/menu/64524f1db252e60056772ce9" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Cardápio <span aria-hidden="true">↗</span></a>
+                  <a href="https://www.ifood.com.br/delivery/sao-paulo-sp/astor---vila-madalena-vila-madalena/979d73aa-2b33-4925-b7c9-0f8480260ecd" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">iFood <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li class="casa" id="casa-vila-nova" tabindex="-1">
+              <figure class="casa__media"><img data-pic="casa-vila-nova" sizes="(min-width: 1024px) 52vw, 86vw" alt="Fachada do Astor Vila Nova Conceição, com toldos vermelhos e mesas na calçada arborizada"></figure>
+              <div class="casa__info">
+                <span class="casa__num">05</span>
+                <h3 class="casa__name display">Vila Nova Conceição</h3>
+                <ul class="casa__facts"><li>Valet</li><li>Pet friendly nas mesas externas</li></ul>
+                <div class="casa__actions">
+                  <a href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Reservar <span aria-hidden="true">↗</span></a>
+                  <a href="https://livemenu.app/menu/67ddbc3c44b9d5e648e942b7" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Cardápio <span aria-hidden="true">↗</span></a>
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+Astor+Vila+Nova+Concei%C3%A7%C3%A3o+S%C3%A3o+Paulo" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Como chegar <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li class="casa casa--cofre" id="casa-bar-do-cofre" tabindex="-1">
+              <figure class="casa__media"><img data-pic="casa-bar-do-cofre" sizes="(min-width: 1024px) 52vw, 86vw" alt="Bar do Cofre: balcão iluminado entre portas de cofre de aço circulares"></figure>
+              <div class="casa__info">
+                <span class="casa__num">06</span>
+                <h3 class="casa__name display">Bar do Cofre</h3>
+                <address class="casa__address">Rua João Brícola, 24 – Centro<br>No subsolo do Farol Santander</address>
+                <details class="casa__hours">
+                  <summary>Horário de funcionamento</summary>
+                  <dl>
+                    <div><dt>Terça</dt><dd>16h às 23h</dd></div>
+                    <div><dt>Quarta</dt><dd>16h à 0h</dd></div>
+                    <div><dt>Quinta</dt><dd>12h à 0h</dd></div>
+                    <div><dt>Sexta e sábado</dt><dd>12h à 1h</dd></div>
+                    <div><dt>Domingo</dt><dd>12h às 20h</dd></div>
+                  </dl>
+                  <p>Almoço quinta e sexta das 12h às 15h30; sábado e domingo, o dia todo.</p>
+                </details>
+                <div class="casa__actions">
+                  <a href="https://reservation-widget.tagme.com.br/smartlink/64513977e74a9f0055b72ef7" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Reservar <span aria-hidden="true">↗</span></a>
+                  <a href="https://livemenu.app/menu/64513977e74a9f0055b72ef7" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Cardápio <span aria-hidden="true">↗</span></a>
+                  <a href="https://www.google.com.br/maps/place/SubAstor+Bar+do+Cofre/@-23.5458848,-46.6367738,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce590399148f61:0x41e413445f4a030c!8m2!3d-23.5458897!4d-46.6341989!16s%2Fg%2F11fjtyjl2b" target="_blank" rel="noopener" class="link-arrow link-arrow--sm">Como chegar <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <p class="casas__hint" aria-hidden="true">Arraste para conhecer as casas →</p>
+      </div>
+    </section>
+
+    <!-- ================= 07 · RESERVAS ================= -->
+    <section class="res section--ink" id="reservas" aria-labelledby="res-title" data-section="reservas" tabindex="-1">
+      <div class="res__media" data-res-media>
+        <img data-pic="salao-cheio" sizes="100vw" alt="Salão do Astor lotado à noite, sob o painel de azulejos e luminárias">
+      </div>
+      <div class="res__panel container">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__rule" aria-hidden="true"></span>Reservas</p>
+        <h2 class="display h2 res__title" id="res-title" data-split>Seu próximo encontro começa aqui.</h2>
+        <p class="lede" data-reveal>Escolha sua casa e venha viver uma experiência Astor.</p>
+        <div class="res__ctas" data-reveal>
+          <a class="btn btn--solid btn--lg" href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener">
+            <span class="btn__label" data-label="Reserve sua mesa">Reserve sua mesa</span><span class="btn__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="btn btn--line" href="https://api.whatsapp.com/send/?phone=5511943643170&amp;text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+do+Bar+Astor+e+preciso+de+uma+informa%C3%A7%C3%A3o.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">
+            <span class="btn__label" data-label="Fale pelo WhatsApp">Fale pelo WhatsApp</span><span class="btn__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="res__note" data-reveal>Não cobramos taxa de reserva nem de entrada. Reservas para o Bar do Cofre são feitas <a href="https://reservation-widget.tagme.com.br/smartlink/64513977e74a9f0055b72ef7" target="_blank" rel="noopener">neste link</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 08 · RODAPÉ ================= -->
+  <footer class="foot section--ink" aria-labelledby="foot-title">
+    <div class="container foot__grid">
+      <div class="foot__brand">
+        <h2 class="visually-hidden" id="foot-title">Astor</h2>
+        <p class="foot__tag display">Boemia, sabor<br>e encontros.</p>
+        <a class="btn btn--line btn--sm" href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener"><span class="btn__label" data-label="Reserve sua mesa">Reserve sua mesa</span><span class="btn__arrow" aria-hidden="true">↗</span></a>
+      </div>
+
+      <nav class="foot__col" aria-label="Navegação do rodapé">
+        <p class="foot__label">Navegue</p>
+        <ul>
+          <li><a href="#o-astor">O Astor</a></li>
+          <li><button type="button" data-menu-open>Cardápio</button></li>
+          <li><a href="#experiencias">Experiências</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="https://barastor.com.br/missao-astor/" target="_blank" rel="noopener">Missão Astor</a></li>
+          <li><a href="https://barastor.com.br/perguntas-frequentes/" target="_blank" rel="noopener">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+
+      <div class="foot__col">
+        <p class="foot__label">Nossas casas</p>
+        <ul>
+          <li><a href="#casa-oscar-freire">Oscar Freire</a></li>
+          <li><a href="#casa-paulista">Paulista</a></li>
+          <li><a href="#casa-jk">Shopping JK</a></li>
+          <li><a href="#casa-vila-madalena">Vila Madalena</a></li>
+          <li><a href="#casa-vila-nova">Vila Nova Conceição</a></li>
+          <li><a href="#casa-bar-do-cofre">Bar do Cofre</a></li>
+        </ul>
+      </div>
+
+      <div class="foot__col">
+        <p class="foot__label">Contato</p>
+        <ul>
+          <li><a href="https://api.whatsapp.com/send/?phone=5511943643170&amp;text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+do+Bar+Astor+e+preciso+de+uma+informa%C3%A7%C3%A3o.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://barastor.com.br/contato" target="_blank" rel="noopener">Fale conosco</a></li>
+          <li><a href="https://bit.ly/3pMsHWT" target="_blank" rel="noopener">Central de atendimento</a><span class="foot__small">Segunda a sexta, das 12h às 19h</span></li>
+          <li><a href="https://ciatc.gupy.io/" target="_blank" rel="noopener">Trabalhe conosco</a></li>
+          <li><a href="https://barastor.com.br/sala-de-imprensa" target="_blank" rel="noopener">Sala de imprensa</a></li>
+        </ul>
+      </div>
+
+      <div class="foot__col">
+        <p class="foot__label">Siga</p>
+        <ul>
+          <li><a href="https://www.instagram.com/barastor/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/bar.astor" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/@barastor8759" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://bit.ly/astor-mood" target="_blank" rel="noopener">Spotify · Astor Mood</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="foot__wordmark wordmark" aria-hidden="true" data-foot-wordmark>ASTOR</p>
+
+    <div class="container foot__legal">
+      <p>© <span data-year>2026</span> Astor. Todos os direitos reservados.</p>
+      <p>Se beber, não dirija. Venda proibida para menores de 18 anos.</p>
+      <p><a href="https://digital.ciatradicional.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Cookies e Privacidade</a></p>
+    </div>
+  </footer>
+
+  <!-- CTA fixo no mobile -->
+  <a class="sticky-cta" href="https://reservation-widget.tagme.com.br/group/645bde5bf8307e0056c186ee" target="_blank" rel="noopener" data-sticky-cta>
+    Reserve sua mesa <span aria-hidden="true">↗</span>
+  </a>
+
+  <!-- Cardápios: um por casa (livemenu oficial) -->
+  <dialog class="menu-dialog" id="cardapio" aria-labelledby="cardapio-title" data-menu-dialog>
+    <div class="menu-dialog__inner">
+      <header class="menu-dialog__head">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__rule" aria-hidden="true"></span>Cardápio</p>
+        <h2 class="display h3" id="cardapio-title">Escolha sua casa</h2>
+        <button class="menu-dialog__close" type="button" data-menu-close aria-label="Fechar">Fechar <span aria-hidden="true">×</span></button>
+      </header>
+      <ul class="menu-dialog__list">
+        <li><a href="https://livemenu.app/menu/6453eb740653a50055da50ed" target="_blank" rel="noopener"><span class="display">Oscar Freire</span><span class="menu-dialog__go" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://livemenu.app/menu/64b7e0d12987cd00505731a7" target="_blank" rel="noopener"><span class="display">Paulista</span><span class="menu-dialog__go" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://livemenu.app/menu/6453e3b236739a00555e405d" target="_blank" rel="noopener"><span class="display">Shopping JK</span><span class="menu-dialog__go" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://livemenu.app/menu/64524f1db252e60056772ce9" target="_blank" rel="noopener"><span class="display">Vila Madalena</span><span class="menu-dialog__go" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://livemenu.app/menu/67ddbc3c44b9d5e648e942b7" target="_blank" rel="noopener"><span class="display">Vila Nova Conceição</span><span class="menu-dialog__go" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://livemenu.app/menu/64513977e74a9f0055b72ef7" target="_blank" rel="noopener"><span class="display">Bar do Cofre</span><span class="menu-dialog__go" aria-hidden="true">↗</span></a></li>
+      </ul>
+      <p class="menu-dialog__note">Os cardápios abrem na plataforma oficial de cada casa.</p>
+    </div>
+  </dialog>
+</body>
+</html>
