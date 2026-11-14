@@ -335,7 +335,7 @@ em { font-style: italic; }
 .hero__inner { position: relative; padding-top: var(--nav-h); padding-bottom: 14vh; }
 .hero__inner .eyebrow { margin-bottom: 28px; }
 .hero__title {
-  font-size: clamp(2.7rem, 1.4rem + 4.6vw, 6.6rem);
+  font-size: min(clamp(2.7rem, 1.4rem + 4.6vw, 6.6rem), 10.5svh);
   line-height: 0.98;
   max-width: 12.5ch;
 }
@@ -380,6 +380,23 @@ em { font-style: italic; }
 .js-intro [data-hero-wordmark],
 .js-intro .nav { visibility: hidden; }
 
+/* Telas baixas (notebooks pequenos, celular deitado): o hero cabe inteiro */
+@media (max-height: 680px) {
+  .hero__inner { padding-bottom: 8vh; }
+  .hero__inner .eyebrow { margin-bottom: 14px; }
+  .hero__lede { margin-top: 16px; }
+  .hero__ctas { margin-top: 22px; }
+  .btn { min-height: 46px; }
+}
+
+/* Celular deitado: o hero começa logo abaixo do menu em vez de centralizar numa área maior que a tela */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: 0; height: auto; align-items: flex-start; }
+  .hero__inner { padding-top: calc(var(--nav-h) + 12px); padding-bottom: 72px; }
+  .hero__lede { max-width: 48ch; }
+  .hero__scroll { display: none; }
+}
+
 @media (max-width: 767px) {
   .hero { align-items: flex-end; }
   .hero__inner { padding-bottom: 22svh; }
@@ -398,6 +415,7 @@ em { font-style: italic; }
    ========================================================================== */
 .manifesto {
   position: relative; z-index: 3;
+  overflow: clip; /* nada da seção invade a vizinha, nem com parallax */
   padding-block: clamp(110px, 18vh, 220px) clamp(80px, 12vh, 160px);
 }
 .manifesto__grid {
@@ -423,7 +441,7 @@ em { font-style: italic; }
 .manifesto__award-src { margin-top: 8px; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bronze); }
 
 .manifesto__fig--a { grid-column: 1 / 9; }
-.manifesto__fig--b { grid-column: 5 / 13; margin-top: -12vh; margin-bottom: -22vh; position: relative; z-index: 2; }
+.manifesto__fig--b { grid-column: 5 / 13; margin-top: -12vh; position: relative; z-index: 2; }
 .frame { position: relative; overflow: hidden; }
 .frame img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -432,17 +450,17 @@ em { font-style: italic; }
   .manifesto__text { grid-column: 3 / 13; }
   .manifesto__fig--a { grid-column: 1 / 5; grid-row: 3; align-self: start; }
   .manifesto__award { grid-column: 6 / 9; grid-row: 3; align-self: center; }
-  .manifesto__fig--b { grid-column: 9 / 13; grid-row: 3; margin-top: 4vh; margin-bottom: -34vh; }
+  .manifesto__fig--b { grid-column: 9 / 13; grid-row: 3; margin-top: 4vh; }
 }
 
 /* ==========================================================================
    03 · GASTRONOMIA
    ========================================================================== */
-.gastro { position: relative; z-index: 1; }
+.gastro { position: relative; z-index: 1; overflow: clip; }
 .gastro__stage {
   position: relative;
   height: 100svh; min-height: 640px;
-  overflow-x: clip;
+  overflow: clip;
 }
 .gastro__plate {
   position: absolute; z-index: 1;
@@ -504,6 +522,7 @@ em { font-style: italic; }
 @media (max-width: 1023px) {
   .gastro__stage { height: auto; min-height: 0; padding-block: 8vh 0; display: flex; flex-direction: column; }
   .gastro__plate { position: relative; left: auto; top: auto; transform: none; width: 150vw; margin-left: -38vw; }
+  @media (min-width: 600px) { .gastro__plate { width: 112vw; margin-left: -18vw; } }
   .gastro__plate .caption { right: 32%; bottom: 8%; }
   .gastro__copy { position: relative; right: auto; top: auto; transform: none; width: auto; padding-inline: var(--gutter); margin-top: -4vh; }
 }
@@ -666,7 +685,7 @@ em { font-style: italic; }
    06 · NOSSAS CASAS
    ========================================================================== */
 .casas { position: relative; }
-.casas__pin { position: relative; padding-block: clamp(96px, 14vh, 160px) clamp(60px, 10vh, 120px); }
+.casas__pin { position: relative; overflow: clip; padding-block: clamp(96px, 14vh, 160px) clamp(60px, 10vh, 120px); }
 .casas__head {
   display: grid; gap: 22px;
   margin-bottom: clamp(36px, 6vh, 72px);
@@ -741,8 +760,19 @@ em { font-style: italic; }
 
 /* Modo horizontal guiado pelo scroll (desktop com movimento) */
 .casas.is-horizontal .casas__pin { height: 100svh; padding-block: calc(var(--nav-h) + 2vh) 4vh; display: flex; flex-direction: column; }
-.casas.is-horizontal .casas__viewport { overflow: clip; scroll-snap-type: none; flex: 1; }
-.casas.is-horizontal .casa__media { height: min(44svh, 30vw); }
+.casas.is-horizontal .casas__viewport { overflow: clip; scroll-snap-type: none; flex: 1 1 auto; min-height: 0; }
+.casas.is-horizontal .casas__track { height: 100%; }
+/* A foto ocupa só a altura que sobra: nome e links nunca saem da tela */
+.casas.is-horizontal .casa { display: flex; flex-direction: column; height: 100%; }
+.casas.is-horizontal .casa__media { flex: 1 1 auto; min-height: 0; height: auto; max-height: 30vw; }
+.casas.is-horizontal .casa__info { flex: none; }
+@media (max-height: 820px) {
+  .casas.is-horizontal .casas__head .h2 { font-size: clamp(2rem, 6.4svh, 3.6rem); }
+  .casas.is-horizontal .casas__head .eyebrow { margin-bottom: 10px; }
+  .casas.is-horizontal .casas__head { margin-bottom: 2.5vh; row-gap: 10px; }
+  .casas.is-horizontal .casa__name { font-size: clamp(1.6rem, 4.6svh, 2.6rem); }
+  .casas.is-horizontal .casa__info { padding-top: 14px; row-gap: 6px; }
+}
 .casas.is-horizontal .casas__hint { display: none; }
 .casas.is-horizontal .casas__head { margin-bottom: 3.5vh; }
 .casas.is-horizontal .casa__media img { transition: none; }
