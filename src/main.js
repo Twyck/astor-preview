@@ -298,7 +298,7 @@ function choreography() {
         gsap.set(gCopy, { yPercent: -50 })
         const gTitle = SplitText.create($('h2', gCopy), { type: 'lines', mask: 'lines', linesClass: 'split-line' })
         const tl = gsap.timeline({
-          scrollTrigger: { trigger: '[data-gastro]', start: 'top top', end: '+=190%', pin: true, scrub: 0.8 },
+          scrollTrigger: { trigger: '[data-gastro]', start: 'top top', end: '+=190%', pin: true, scrub: 0.8, refreshPriority: 4 },
         })
         tl.fromTo(plate, { scale: 1.22, xPercent: -14, yPercent: -40, rotate: -12 }, { scale: 1, xPercent: 0, yPercent: -50, rotate: 0, ease: 'none', duration: 1 }, 0)
           .from($('.eyebrow', gCopy), { opacity: 0, x: -20, duration: 0.25 }, 0.35)
@@ -325,7 +325,7 @@ function choreography() {
         gsap.set([cCopy, word], { yPercent: -50 })
         const cTitle = SplitText.create($('h2', cCopy), { type: 'lines', mask: 'lines', linesClass: 'split-line' })
         const tl = gsap.timeline({
-          scrollTrigger: { trigger: stage, start: 'top top', end: '+=280%', pin: true, scrub: 0.8 },
+          scrollTrigger: { trigger: stage, start: 'top top', end: '+=280%', pin: true, scrub: 0.8, refreshPriority: 3 },
         })
         tl.fromTo(glass, { scale: 0.58, yPercent: -36 }, { scale: 1, yPercent: -50, ease: 'none', duration: 1 }, 0)
           .fromTo(stage, { '--glow': 0.15 }, { '--glow': 1, ease: 'none', duration: 1 }, 0)
@@ -354,7 +354,7 @@ function choreography() {
         scrollTrigger: { trigger: '[data-exp]', start: 'top 65%', once: true },
       })
       if (desktop) {
-        gsap.timeline({ scrollTrigger: { trigger: '[data-exp]', start: 'top top', end: '+=170%', pin: true, scrub: 0.8 } })
+        gsap.timeline({ scrollTrigger: { trigger: '[data-exp]', start: 'top top', end: '+=170%', pin: true, scrub: 0.8, refreshPriority: 2 } })
           .fromTo(frame, { clipPath: 'inset(23% 31% 23% 31%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', duration: 1 }, 0)
           .fromTo($('img', frame), { scale: 1.3 }, { scale: 1, ease: 'none', duration: 1 }, 0)
           .to(lineA, { x: () => -window.innerWidth * 0.18, opacity: 0, ease: 'none', duration: 0.7 }, 0.15)
@@ -381,6 +381,7 @@ function choreography() {
             pin: true,
             scrub: 0.8,
             invalidateOnRefresh: true,
+            refreshPriority: 1,
             onUpdate: (self) => setCasasProgress(Math.round(self.progress * (casaEls.length - 1)), self.progress),
           },
         })
